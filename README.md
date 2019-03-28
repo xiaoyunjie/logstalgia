@@ -23,9 +23,10 @@ brew install logstalgia
 ## Usage
 
 **回放日志**
+
 ```bash
 logstalgia access.log
-``
+```
 
 **远程实时跟踪日志**
 ```bash
