@@ -1,4 +1,4 @@
-# Installation
+## Installation
 
 **Ubuntu**
 ```bash
@@ -15,5 +15,25 @@ sudo yum install -y yum install -y gcc-c++ SDL2-devel SDL2_image-devel pcre-deve
 
 **MacOS**
 ```bash
-sudo brew install 
+brew install logstalgia 
 ````
+
+----
+
+## Usage
+
+**回放日志**
+```bash
+logstalgia access.log
+``
+
+**远程实时跟踪日志**
+```bash
+ssh username@yourserver.com "tail -f /var/log/nginx/access.log" | logstalgia --sync
+```
+
+**远程实时跟踪日志并过滤指定字符串**
+```bash
+ssh username@yourserver.com "tail -f /var/log/nginx/access.log" | logstalgia -g "Mozilla/4.0" --sync
+```
+
