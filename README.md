@@ -35,6 +35,6 @@ ssh username@yourserver.com "tail -f /var/log/nginx/access.log" | logstalgia --s
 
 **远程实时跟踪日志并过滤指定字符串**
 ```bash
-ssh username@yourserver.com "tail -f /var/log/nginx/access.log" | logstalgia -g "Mozilla/4.0" --sync
+ssh username@yourserver.com "tail -f /var/log/nginx/access.log" | logstalgia -g "clients,Mozilla/4.0,50" --sync
 ```
 
